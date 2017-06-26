@@ -1,0 +1,75 @@
+@import "./util.scss";
+@import "./variable.scss";
+@font-face {
+  font-family: 'iconfont';  /* project id 307679 */
+  src: url('//at.alicdn.com/t/font_zilk4zhokfadzpvi.eot');
+  src: url('//at.alicdn.com/t/font_zilk4zhokfadzpvi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_zilk4zhokfadzpvi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_zilk4zhokfadzpvi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_zilk4zhokfadzpvi.svg#iconfont') format('svg');
+}
+.iconfont{
+	font-family:"iconfont"
+}
+
+#app{
+	max-width:640px;
+	margin:0 auto;
+	box-shadow:0 0 2px 2px #ccc;
+	height: 100%;
+	@include flexbox(column);
+
+	header{
+		width: 100%;
+		background-color: #fff;
+		height: 1.13rem;
+
+	}
+
+	#content{
+		width: 100%;
+		overflow: auto;
+		@include flex();
+	}
+
+	footer{
+		height: 0.70rem;
+		width: 100%;
+		background-color:#fafafa;
+		font-size: 0.24rem;
+		border-top: 1px solid #d9d9d9;
+		#tabBar{
+			height: 100%;
+			@include flexbox();
+			li{
+				height: 100%;
+				color: #666;
+				@include flex();
+				@include flexbox(column);
+				font-size: 0.16rem;
+				&.active{
+					color: #b4282d;
+					font-weight: 600;
+				}
+				i{
+					display: block;
+					text-align: center;
+					font-size: 0.28rem;
+					height: 0.38rem;
+				}
+			}
+		}
+	}
+}
+#toast{
+    width: 80%;
+    position: fixed;
+    left: 10%;
+    background-color: rgba(0,0,0,0.6);
+    bottom: 80px; 
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #eee;
+    text-align: center;
+    display: none;
+}

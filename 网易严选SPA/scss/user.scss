@@ -1,0 +1,55 @@
+@import "./util.scss";
+@import "./variable.scss";
+
+#userHeader{
+	@include flexbox();
+	justify-content:space-around;
+	background:url(./../image/userbg.jpg);
+	#userDetial{
+		@include flexbox();
+		color: #ccc;
+		#advator{
+			width: 50px;
+			height: 50px;
+			border-radius: 25px;
+			margin-right: 20px;
+		}
+		#userName_Level{
+			@include flexbox(column);
+		}
+	}
+
+	#userQr{
+		width: 40px;
+		height: 40px;
+		border-radius:20px;
+		background:url(./../image/Qrbg.png) no-repeat center center;
+		background-size:100%;
+	}
+}
+
+#userContent{
+	height: 100%;
+	overflow:auto;
+	@include flexbox(column);
+	#userMore{
+		@include flexbox();
+		flex-wrap: wrap;
+		li{
+			width: 33.333%;
+			height: 110px;
+			border-right: 1px solid rgba(0,0,0,0.15);
+			border-bottom: 1px solid rgba(0,0,0,0.15);
+			@include flexbox();
+			&:nth-child(3n+3){
+				border-bottom: 1px solid rgba(0,0,0,0.15);
+			}
+		}
+	}
+	#logout{
+		display: block;
+		width: 80%;
+		height: 50px;
+		margin-top: 20px;
+	}
+}

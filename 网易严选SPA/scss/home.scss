@@ -1,0 +1,135 @@
+@import "./variable.scss";
+@import "./util.scss";
+
+#app{
+	header{
+		&#homeHeader{
+			@include flexbox(column);
+			#ht{
+				@include flex(1);
+				@include flexbox();
+				height: 0.4rem;
+				width: 100%;
+				padding-right: 5px;
+				li{
+					height: 100%;
+					&:nth-child(1){
+						@include flexbox();
+						@include flex(1);
+						img{
+							width: 70px;
+						}
+					}
+					&:nth-child(2){
+						@include flexbox();
+						@include flex(3);
+						.searchbox{
+							background-color: #ededed;
+							height: 0.333rem;
+							line-height: 0.333rem;
+							width: 100%;
+							border-radius: 4px;
+							text-align: center;
+							background-image:url(./../image/search.png);
+							background-repeat:no-repeat;
+							background-position: 0.2rem center;
+							background-size:0.24rem 0.24rem;
+						}
+					}
+				}
+			}
+			#hb{
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				li{
+					flex: 1;
+					margin:0 2px;
+					text-align: center;
+					@include flexbox(column);
+					@include flex();
+					&.active{
+						color:#b4282d;
+						border-bottom:1px solid #b4282d;
+					}
+				}
+			}
+		}
+	}
+
+	#content{
+		#homeContent{
+			.swiper-container{
+				width: 100%;
+				height: 2.4rem;
+			}
+
+			.service{
+				width: 100%;
+				height: 0.4rem;
+				@include flexbox();
+				justify-content: space-around;
+				p{
+					height: 100%;
+					@include flexbox(column);
+					font-size: 0.16rem;
+					color: #333;
+				}
+			}
+
+			#proList{
+				width: 100%;
+				li{
+					width: 2.25rem;
+					float: left;
+					margin:0 0.066rem 0.133rem 0.133rem;
+					a{
+						text-decoration: none;
+						.hd{
+							background-color: #f4f4f4;
+							.proimg{
+								img{
+									width: 2.25rem;
+									height: 2.25rem;
+								}
+							}
+							.desc{
+								background-color: #f1ece2;
+								font-size: 0.16rem;
+								color: #9f8a60;
+								text-overflow: ellipsis;
+								white-space: nowrap;
+								overflow: hidden;
+								padding:0.0667rem;
+							}
+						}
+						.bt{
+							width: 100%;
+							display: inline-block;
+							text-align: center;
+							.proName{
+								font-size: 0.2267rem;
+								color: #333;
+								padding: 5px;
+								text-overflow: ellipsis;
+								white-space: nowrap;
+								overflow: hidden;
+							}
+							.price{
+								color: #b4282d;
+								font-size: 0.2133rem;
+								padding: 0.0667rem;
+							}
+							.addCart{
+								background-color: #f1ece2;
+								color: #9f8a60;
+								border:none;
+								padding: 0.0667rem;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
